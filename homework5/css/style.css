@@ -130,7 +130,7 @@ nav ul li{
     .events{
         float: none;
         width: 100%;
-        position: absolute;
+        position: inherit;
     }  
 }
 
