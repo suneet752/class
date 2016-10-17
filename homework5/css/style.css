@@ -121,7 +121,7 @@ nav ul li{
 
 .events{
     width:28%;
-/*    position: absolute;    */
+    position: absolute;    
     border: 2px solid #24278D;
     display: block;
 }
@@ -130,6 +130,7 @@ nav ul li{
     .events{
         float: none;
         width: 100%;
+        position: absolute;
     }  
 }
 
@@ -138,7 +139,7 @@ nav ul li{
     float: left;
 /*    position: relative;*/
     border: 2px solid #24278D;
-    margin-left: 2%;
+    margin-left: 30%;
     display: block;
 }
 
