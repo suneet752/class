@@ -11,7 +11,7 @@
         <link rel="icon" href="images/logo.gif">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display+SC" rel="stylesheet">
-        <link rel="stylesheet" href="css/w3.css">
+        <!-- Custom css file -->
         <link rel="stylesheet" href="css/style.css">
         
         <!-- Google Analytics code -->
@@ -87,22 +87,38 @@
             <!-- Gallery section -->
             <div class="section" id="gal">
                 <h2>Im<span class="single">ag<span class="double">e gal</span>le</span>ry</h2>
-                <div class="w3-content" style="max-width:1200px">
-  <img class="mySlides" src="images/athletic_meet.jpg" style="width:100%" alt="athletic_meet">
-  <img class="mySlides" src="images/art_craft_exhibition.jpg" style="width:100%" alt="art_craft_exhibition">
-  <img class="mySlides" src="images/prize_distribution.jpg" style="width:100%" alt="prize_distribution">
+                <!-- Slider -->
 
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="images/athletic_meet.jpg" style="width:100%" onclick="currentDiv(1)" alt="athletic_meet">
-    </div>
-    <div class="w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="images/art_craft_exhibition.jpg" style="width:100%" onclick="currentDiv(2)" alt="art_craft_exhibition">
-    </div>
-    <div class="w3-col s4">
-      <img class="demo w3-opacity w3-hover-opacity-off" src="images/prize_distribution.jpg" style="width:100%" onclick="currentDiv(3)" alt="prize_distribution">
-    </div>
+<div class="slider">
+
+<a class="arrow" id="left" onclick="plusDivs(-1)">&#10094;</a>
+<a class="arrow" id="right" onclick="plusDivs(1)">&#10095;</a>
+
+<div class="mySlides">
+  <img src="images/hansraj_morarji.jpg" style="width:100%" alt="THE SECONDARY SCHOOL BUILDING">
+  <div class="slide-caption">
+    THE SECONDARY SCHOOL BUILDING
   </div>
+</div>
+<div class="mySlides">
+  <img src="images/athletic_meet.jpg" style="width:100%" alt="ANNUAL ATHLETIC MEET">
+  <div class="slide-caption">
+    ANNUAL ATHLETIC MEET
+  </div>
+</div>
+<div class="mySlides">
+  <img src="images/art_craft_exhibition.jpg" style="width:100%" alt="ART AND CRAFT EXHIBITION">
+  <div class="slide-caption">
+    ART AND CRAFT EXHIBITION
+  </div>
+</div>
+<div class="mySlides">
+  <img src="images/prize_distribution.jpg" style="width:100%" alt="ACADEMIC PRIZE DISTRIBUTION CEREMONY">
+  <div class="slide-caption">
+    ACADEMIC PRIZE DISTRIBUTION CEREMONY
+  </div>
+</div>
+
 </div>
 
 <script>
@@ -113,24 +129,15 @@ function plusDivs(n) {
   showDivs(slideIndex += n);
 }
 
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
 function showDivs(n) {
   var i;
   var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
   if (n > x.length) {slideIndex = 1}
   if (n < 1) {slideIndex = x.length}
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
-  }
   x[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " w3-opacity-off";
 }
 </script>
             </div>

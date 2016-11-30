@@ -17,11 +17,12 @@ h2{
 
 p{
     padding: 10px 0px;
-    text-align: justify;
+    text-align: left;
 }
 
 a{
-    color: #072a41; 
+    color: #072a41;
+    text-decoration: none;
 }
 
 a:hover{
@@ -208,15 +209,41 @@ nav{
 }
 }
 
-/* .CONTENT */
+/* SLIDER */
 
-.w3-display-container{
-    overflow-y: hidden;
+.slider{
+    position: relative;
 }
 
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
+.arrow{
+    color: #eee;
+    position: absolute;
+    top: 35%;
+    font-size: 400%;
+}
+
+.arrow:hover{
+    cursor: pointer;
+}
+
+#left{
+    left: 5px;
+}
+
+#right{
+    right: 5px;
+}
+
+.slide-caption-bottom{
+    position: absolute;
+    bottom: 3px;
+    right: 0;
+    color: #fff;
+    padding: 1%;
+    background-color: #000;
+}
+
+/* .CONTENT */
 
 .content{
     margin: 1% auto;
@@ -251,6 +278,7 @@ nav{
 .panel .panel-heading h4{
     color: #fff;
     text-align: center;
+    padding: 10px;
 /*    border-bottom: 2px solid #072a41;  */
 }
 
@@ -288,17 +316,20 @@ nav{
 .btn:hover{
     background-color: #072a41;
     color: #fff;
+    cursor: pointer;
 }
 
 /* Events */
 
 #events{
-    width:28%;
+    width:27%;
     margin-right: 2%;
+    min-height: 395px;
+    margin-bottom: 5px;
 }
 
 .event{
-    margin: 5% 0;
+    margin: 7% 0;
 }
 
 .event:hover{
@@ -331,7 +362,7 @@ nav{
 }
 
 .event .description p{
-    text-align: justify;
+    text-align: left;
     border-left: 1px dotted #000;
     padding-left: 10px;
     margin-left: 0px;
@@ -342,21 +373,20 @@ nav{
 #links{
     width:40%;
     margin-right: 2%;
+    min-height: 395px;
+    margin-bottom: 5px;
 }
 
 .links{
     float: left;
     width: 40%;
+    overflow-x: visible;
 }
 
 .links p{
     text-align: center;
     padding: 10px;
-}
-
-.links a{
-    border-bottom: 2px dotted #072a41;
-    padding-bottom: 6%;
+    overflow-x: visible;
 }
 
 .announce{
@@ -365,22 +395,59 @@ nav{
 }
 
 .announce p{
-    text-align: justify;
+    text-align: left;
     padding: 10px;
 }
 
-.w3-navbar ul li a:hover{
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-bottom: none;
+}
+
+ul.tab li {float: left;}
+
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+ul.tab li:hover {
     background-color: #eee;
 }
 
-.w3-navbar .active-tab{    
+ul.tab li:focus{
     background-color: #eee;
+}
+
+.active-tab {
+    background-color: #eee;
+}
+
+.tabcontent {
+    display: none;
+    margin-top: 3%;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
 }
 
 /* News */
 
 #news{
-    width:28%;
+    width:27%;
+    min-height: 395px;
+    margin-bottom: 5px;
 }
 
 .news{
@@ -410,18 +477,21 @@ nav{
     }
     
     #events{
-        margin: 1% 2%;
+        margin: 1% 2% 5% 2%;
         width: 96%;
+        min-height: 0px;
     }
     
     #links{
-        margin: 1% 2%;
+        margin: 1% 2% 5% 2%;
         width: 96%;
+        min-height: 0px;
     }
     
     #news{
-        margin: 1% 2%;
+        margin: 1% 2% 5% 2%;
         width: 96%;
+        min-height: 0px;
     }
     
 }
@@ -447,7 +517,7 @@ footer{
 
 .social{
     float: left;
-    width: 40%;
+    width: 30%;
     text-align: right;
     padding-right: 2%;
 }
@@ -529,6 +599,10 @@ footer{
     background-color: #eee;
 }
 
+h2{
+    margin-bottom: 3%;
+}
+
 .single{
     border-bottom: 1px solid #000;
 }
@@ -541,7 +615,7 @@ footer{
 
 .main{
     float: left;
-    width: 72%;
+    width: 70%;
     margin: 1%;
     padding: 2%;
     background-color: #fff;
@@ -550,7 +624,7 @@ footer{
 
 .side{
     float: left;
-    width: 24%;
+    width: 22%;
     margin: 1%;
     padding: 2% 0;
     background-color: #fff;
@@ -592,7 +666,7 @@ footer{
 }
 
 .form-section {
-    width: 100%;
+    width: 96%;
     border: 1px solid #072a41;
     padding: 2%;
     text-align: center;
@@ -622,9 +696,9 @@ footer{
 }
 
 
-@media screen and (max-width:575px){
+@media screen and (max-width:850px){
 .main{
-    width: 96%;
+    width: 92%;
     margin: 2%;
     padding: 2%;
     background-color: #fff;
@@ -633,12 +707,19 @@ footer{
 }
 
 .side{
-    width: 96%;
+    width: 92%;
     margin: 2%;
     padding: 2%;
     background-color: #fff;
 /*    min-height: 500px;*/
     text-align: center;
+}
+
+.hero h1{
+    margin: 8% auto;
+    top: 48%;
+    left: 28%;
+    z-index: 1;
 }
 }
 
@@ -695,8 +776,7 @@ footer{
 
 .section-header h4{
     color: #fff;
-    padding: 0;
-    padding-left: 1%;
+    padding: 1%;
     margin: 0;
     text-transform: uppercase;
 }
@@ -704,7 +784,7 @@ footer{
 .panel-circular {
   font-size:45px;
   background-color: #072a41;
-  padding:20px 35px;
+  padding:3.5% 0;
   -webkit-border-radius:100%;
   -moz-border-radius:100%;
   -o-border-radius:100%;
@@ -734,6 +814,7 @@ footer{
     font-weight: 700;
     padding: 0;
     margin: 0;
+    text-align: center;
 }
 
 .panel-circular:hover {
@@ -752,6 +833,18 @@ footer{
     text-align: center;
 }
 
+@media screen and (max-width:575px){
+
+.panel-circular{
+    float: left;
+    margin-left: 12%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    width: 32%;
+    padding: 8% 0;
+}
+    
+}
 /* Contact Page */
 #contact{
     background-image: url(../images/Contact.jpg);
@@ -780,7 +873,7 @@ footer{
 }
 
 .text {
-    width: 40%;
+    width: 35%;
     margin: 5%;
     float: left;
 }
@@ -802,6 +895,7 @@ footer{
     width: 100%;
     text-align: center;
     padding-right: 0;
+    margin-top: 3%;
 }
 
 #con-social a{
@@ -832,7 +926,7 @@ footer{
 }
 
 #n-panel {
-    width: 29.33%;
+    width: 29%;
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 5%;
@@ -841,6 +935,15 @@ footer{
 
 .panel-footer .social{
     float: right;
+}
+
+@media screen and (max-width:575px){
+#n-panel{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
 }
 
 /* All Events Page */
@@ -894,13 +997,23 @@ footer{
 }
 
 #e-panel{
-    width: 29.33%;
+    width: 29%;
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 5%;
     min-height: 200px;
 }
 
+@media screen and (max-width:575px){
+#e-panel{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+}
+
+    
 /* About Page */
 #about{
     background-image: url(../images/HMPS-Andheri.jpg);
@@ -909,13 +1022,7 @@ footer{
 .intro-img {
     float: left;
     margin-right: 2%;
-    height: 150px;
-}
-
-@media screen and (max-width:575px){
-.intro{
-    visibility: hidden;
-    }
+    width: 50%;
 }
 
 #timeline table{
@@ -958,9 +1065,17 @@ footer{
 
 .text-only{
     min-height: 0;
-    width: 98%;
+    width: 95%;
     margin-left: 1%;
     padding: 1%;
+}
+
+@media screen and (max-width:575px){
+.admin-head{
+    width: 80%;
+    float: none;
+    margin-left: 10%;
+}
 }
 
 /* Extra-curriculars Page */
@@ -983,6 +1098,14 @@ footer{
 
 #hostel-life h1{
     max-width: 400px;
+}
+
+.slide-caption{
+    position: absolute;
+    top: 0;
+    color: #fff;
+    padding: 1%;
+    background-color: #000;
 }
 
 /* Faculty Page */
@@ -1035,7 +1158,7 @@ footer{
 }
 
 #e-2{
-    width: 96%;
+    width: 96r%;
     margin: 2%;
     color: #fff;
     background-color: #072a41;
@@ -1043,10 +1166,29 @@ footer{
     padding: 5%;
 }
 
+.text-left{
+    width: 60%;
+    float: left;
+}
+
+.social-right{
+    width: 30%;
+    float: left;
+    margin-left: 5%;
+}
+
+.social-right img{
+    width: 30%;
+}
+
 /* News Page */
 #one-news{
     background-image: url(../images/news.gif);
     background-position: right;
+}
+
+#n-1{
+    width: 99%;
 }
 
 #n-1 img{
@@ -1059,19 +1201,14 @@ footer{
 }
 
 #c-panel{
-    width: 29.33%;
+    width: 29%;
     margin-left: 2%;
     margin-right: 2%;
     margin-bottom: 5%;
-    min-height: 200px;
-}
-
-#c-panel img{
-    height: 130px;
+    min-height: 348px;
 }
 
 #ctt table{
-    overflow-x: auto;
     border-collapse: collapse;
     text-align: center;
     border: 3px solid #072a41;
@@ -1101,4 +1238,16 @@ footer{
     background-color: #072a41;
     color: #fff;
     border-bottom: 2px solid #fff;
+} 
+
+@media screen and (max-width:575px){
+
+#c-panel{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    min-height: 200px;
+}
+
 }

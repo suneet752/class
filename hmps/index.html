@@ -11,7 +11,7 @@
         <link rel="icon" href="images/logo.gif">
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato|Playfair+Display+SC" rel="stylesheet">
-        <link rel="stylesheet" href="css/w3.css">
+        <!-- Custom css file -->
         <link rel="stylesheet" href="css/style.css">
         
         <!-- Google Analytics code -->
@@ -74,32 +74,32 @@
         
         <!-- Slider -->
 
-<div class="w3-display-container">
+<div class="slider">
 
-<a class="w3-btn-floating w3-hover-dark-grey w3-display-left" onclick="plusDivs(-1)">&#10094;</a>
-<a class="w3-btn-floating w3-hover-dark-grey w3-display-right" onclick="plusDivs(1)">&#10095;</a>
+<a class="arrow" id="left" onclick="plusDivs(-1)">&#10094;</a>
+<a class="arrow" id="right" onclick="plusDivs(1)">&#10095;</a>
 
-<div class="w3-display-container mySlides">
+<div class="mySlides">
   <img src="images/hansraj_morarji.jpg" style="width:100%" alt="THE SECONDARY SCHOOL BUILDING">
-  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+  <div class="slide-caption-bottom">
     THE SECONDARY SCHOOL BUILDING
   </div>
 </div>
-<div class="w3-display-container mySlides">
+<div class="mySlides">
   <img src="images/athletic_meet.jpg" style="width:100%" alt="ANNUAL ATHLETIC MEET">
-  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+  <div class="slide-caption-bottom">
     ANNUAL ATHLETIC MEET
   </div>
 </div>
-<div class="w3-display-container mySlides">
+<div class="mySlides">
   <img src="images/art_craft_exhibition.jpg" style="width:100%" alt="ART AND CRAFT EXHIBITION">
-  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+  <div class="slide-caption-bottom">
     ART AND CRAFT EXHIBITION
   </div>
 </div>
-<div class="w3-display-container mySlides">
+<div class="mySlides">
   <img src="images/prize_distribution.jpg" style="width:100%" alt="ACADEMIC PRIZE DISTRIBUTION CEREMONY">
-  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+  <div class="slide-caption-bottom">
     ACADEMIC PRIZE DISTRIBUTION CEREMONY
   </div>
 </div>
@@ -140,11 +140,11 @@ function showDivs(n) {
                     <a href="events/event1.html">
                     <div class="event">
                     <div class="date">
-                    <p>Oct</p>
-                    <h2>31</h2>
+                    <p>Dec</p>
+                    <h2>6</h2>
                     </div>
                     <div class="description">
-                    <p>Oct 31, 2016: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>77th Annual Sports Day to be held from December 6th to December 8th.</p>
                     </div>
                     </div>
                     </a>
@@ -153,11 +153,11 @@ function showDivs(n) {
                     <a href="events/event1.html">
                     <div class="event">
                     <div class="date">
-                    <p>Nov</p>
-                    <h2>1</h2>
+                    <p>Dec</p>
+                    <h2>12</h2>
                     </div>
                     <div class="description">
-                    <p>Nov 1, 2016: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Winter vacations begin and school closes for the day-boarders.</p>
                     </div>
                     </div>
                     </a>
@@ -166,11 +166,11 @@ function showDivs(n) {
                     <a href="events/event1.html">
                     <div class="event">
                     <div class="date">
-                    <p>Nov</p>
-                    <h2>2</h2>
+                    <p>Dec</p>
+                    <h2>25</h2>
                     </div>
                     <div class="description">
-                    <p>Nov 2, 2016: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p>Christmas party and celebrations for the hostellers.</p>
                     </div>
                     </div>
                     </a>
@@ -185,12 +185,12 @@ function showDivs(n) {
                         <h4>Useful Links</h4>
                     </div>
                     
-                    <ul class="w3-navbar w3-white">
-                        <li><a href="javascript:void(0)" onclick="openCity('Parent');myFunction2();" id="tab1" class="active-tab"><strong>Parent</strong></a></li>
-                        <li><a href="javascript:void(0)" onclick="openCity('Student');myFunction3();" id="tab2"><strong>Student</strong></a></li>
+                    <ul class="tab">
+                        <li id="tab1" class="active-tab"><a href="javascript:void(0)" onclick="openCity('Parent');myFunction2();"><strong>Parent</strong></a></li>
+                        <li id="tab2"><a href="javascript:void(0)" onclick="openCity('Student');myFunction3();"><strong>Student</strong></a></li>
                     </ul>
 
-                    <div id="Parent" class="w3-container city">
+                    <div id="Parent" class="tabcontent city">
                         <h5>Links and Announcement for Parents</h5>
                         <div class="links">
                             <p title="Contact Us"><a href="contact.html#Form"><i class="fa fa-envelope fa-3x"></i></a></p>
@@ -198,13 +198,15 @@ function showDivs(n) {
                             <p title="Gallery"><a href="gallery.html"><i class="fa fa-image fa-3x"></i></a></p>
                         </div>
                         <div class="announce">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit!</p>
+                            <p>The last day to pay fees for the even semester is <b>12th December 2016!</b></p>
                         
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elit!</p>
+                            <p>Admission for the academic year 2017-2018 will begin in the month of <b>March</b>.</p>
+                            
+                            <p>The parents-teacher's meeting will be held by the PTA on <b>December 22nd at 9am</b>.</p>
                         </div>
                     </div>
 
-                    <div id="Student" class="w3-container city">
+                    <div id="Student" class="tabcontent city">
                         <h5>Links and Announcement for Students</h5>
                         <div class="links">
                             <p title="Time-Table"><a href="grades/grade1.html"><i class="fa fa-calendar fa-3x"></i></a></p>
@@ -212,9 +214,9 @@ function showDivs(n) {
                             <p title="Apply Now!"><a href="admissions.html#Form"><i class="fa fa-edit fa-3x"></i></a></p>
                         </div>
                         <div class="announce">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit!</p>
-                        
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, lorem ipsum dolor sit amet, consectetur adipiscing elit!</p>
+                            <p>The end semester examinations are beginning on <b>December 14th 2016.</b></p>
+                            <p>The last day to register for school cricket team selections is <b>20th December.</b></p> 
+                            <p>Admission for the academic year 2017-2018 will begin in the month of <b>March</b>.</p>
                         </div>
                     </div>
 
@@ -260,7 +262,7 @@ function showDivs(n) {
                         <img src="images/Art-&-Craft-Exhibition-2011-12-001.jpg">
                     </div>
                     <div class="description">
-                    <p><strong>Art &amp; Craft Exhibition</strong><br>Oct 11, 2016: Lorem ipsum dolor sit amet..</p>
+                    <p><strong>Art &amp; Craft Exhibition</strong><br>Oct 11, 2016: The event was a grand success..</p>
                     </div>
                     </div>
                     </a>
@@ -272,7 +274,7 @@ function showDivs(n) {
                         <img src="images/Annual-Athletic-Meet-2011-12--004.jpg">
                     </div>
                     <div class="description">
-                    <p><strong>Athletic Meet</strong><br>Oct 20, 2016: Lorem ipsum dolor sit amet..</p>
+                    <p><strong>Athletic Meet</strong><br>Oct 20, 2016: The event went about smoothly..</p>
                     </div>
                     </div>
                     </a>
@@ -284,7 +286,7 @@ function showDivs(n) {
                         <img src="images/Juniors'-Nite-2011-12---04.jpg">
                     </div>
                     <div class="description">
-                    <p><strong>Junior's Nite</strong><br>Oct 21, 2016: Lorem ipsum dolor sit amet..</p>
+                    <p><strong>Junior's Nite</strong><br>Oct 21, 2016: The Junior's Night was a huge hit..</p>
                     </div>
                     </div>
                     </a>
