@@ -121,7 +121,7 @@
                 <!-- Panel 3 -->
                 <div class="panel panel-w" id="c-panel">
                     <div class="panel-body">
-                        <img src="../images/history.jpg">
+                        <img src="../images/history.png">
                         <p>Course Description</p>
                         <p>For Grade 1</p>
                         <p>Faculty:</p>
@@ -136,7 +136,7 @@
                 <!-- Panel 4 -->
                 <div class="panel panel-w" id="c-panel">
                     <div class="panel-body">
-                        <img src="../images/civics.jpg">
+                        <img src="../images/civics.png">
                         <p>Course Description</p>
                         <p>For Grade 1</p>
                         <p>Faculty:</p>
@@ -166,7 +166,7 @@
                 <!-- Panel 6 -->
                 <div class="panel panel-w" id="c-panel">
                     <div class="panel-body">
-                        <img src="../images/geography.jpg">
+                        <img src="../images/geography.png">
                         <p>Course Description</p>
                         <p>For Grade 1</p>
                         <p>Faculty:</p>
@@ -181,13 +181,12 @@
             </div>
             
             <!-- Time table -->
-
             <div class="section" id="ctt">
                 <h2>T<span class="single">im<span class="double">e - Ta</span>bl</span>e</h2>
-                <div class="city" id="A">
+                <div class="division" id="A">
                     <table>
                         <tr>
-                            <td id="div"><a href="javascript:void(0)" onclick="openCity('A');">DIVISION A</a>
+                            <td id="active-div"><a href="javascript:void(0)" onclick="openDivision('A');">DIVISION A</a>
                             </td>
                             <td colspan="6">
                                 <h4>DIVISION A</h4>
@@ -197,7 +196,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openCity('B');">DIVISION B</a>
+                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openDivision('B');">DIVISION B</a>
                             </td>
                             <th>Time</th>
                             <th>Monday</th>
@@ -207,7 +206,7 @@
                             <th>Friday</th>
                         </tr>
                         <tr>
-                            <td>9:00-10:00</td>
+                            <td id="time">9:00-10:00</td>
                             <td>English</td>
                             <td>English</td>
                             <td>English</td>
@@ -215,7 +214,7 @@
                             <td>English</td>
                         </tr>
                         <tr>
-                            <td>10:00-11:00</td>
+                            <td id="time">10:00-11:00</td>
                             <td>Maths</td>
                             <td>Maths</td>
                             <td>Maths</td>
@@ -223,7 +222,7 @@
                             <td>Maths</td>
                         </tr>
                         <tr>
-                            <td>11:00-12:00</td>
+                            <td id="time">11:00-12:00</td>
                             <td>History</td>
                             <td>History</td>
                             <td>History</td>
@@ -231,9 +230,9 @@
                             <td>History</td>
                         </tr>
                         <tr>
-                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openCity('C');">DIVISION C</a>
+                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openDivision('C');">DIVISION C</a>
                             </td>
-                            <td>12:00-1:00</td>
+                            <td id="time">12:00-1:00</td>
                             <td>Civics</td>
                             <td>Civics</td>
                             <td>Civics</td>
@@ -241,11 +240,11 @@
                             <td>Civics</td>
                         </tr>
                         <tr>
-                            <td>1:00-1:30</td>
+                            <td id="time">1:00-1:30</td>
                             <td colspan="5">RECESS</td>
                         </tr>
                         <tr>
-                            <td>1:30-2:30</td>
+                            <td id="time">1:30-2:30</td>
                             <td>Science</td>
                             <td>Science</td>
                             <td>Science</td>
@@ -253,7 +252,7 @@
                             <td>Science</td>
                         </tr>
                         <tr>
-                            <td>2:30-3:00</td>
+                            <td id="time">2:30-3:00</td>
                             <td>Geography</td>
                             <td>Geography</td>
                             <td>Geography</td>
@@ -263,10 +262,10 @@
                     </table>
                 </div>
                 
-                <div class="city" id="B">
+                <div class="division" id="B">
                     <table>
                         <tr>
-                            <td id="div"><a href="javascript:void(0)" onclick="openCity('A');">DIVISION A</a>
+                            <td id="div"><a href="javascript:void(0)" onclick="openDivision('A');">DIVISION A</a>
                             </td>
                             <td colspan="6">
                                 <h4>DIVISION B</h4>
@@ -276,7 +275,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openCity('B');">DIVISION B</a>
+                            <td id="active-div" rowspan="4"><a href="javascript:void(0)" onclick="openDivision('B');">DIVISION B</a>
                             </td>
                             <th>Time</th>
                             <th>Monday</th>
@@ -310,7 +309,7 @@
                             <td>Maths</td>
                         </tr>
                         <tr>
-                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openCity('C');">DIVISION C</a>
+                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openDivision('C');">DIVISION C</a>
                             </td>
                             <td>12:00-1:00</td>
                             <td>Civics</td>
@@ -342,10 +341,10 @@
                     </table>
                 </div>
                 
-                <div class="city" id="C">
+                <div class="division" id="C">
                     <table>
                         <tr>
-                            <td id="div"><a href="javascript:void(0)" onclick="openCity('A');">DIVISION A</a>
+                            <td id="div"><a href="javascript:void(0)" onclick="openDivision('A');">DIVISION A</a>
                             </td>
                             <td colspan="6">
                                 <h4>DIVISION C</h4>
@@ -355,7 +354,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openCity('B');">DIVISION B</a>
+                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openDivision('B');">DIVISION B</a>
                             </td>
                             <th>Time</th>
                             <th>Monday</th>
@@ -389,7 +388,7 @@
                             <td>History</td>
                         </tr>
                         <tr>
-                            <td id="div" rowspan="4"><a href="javascript:void(0)" onclick="openCity('C');">DIVISION C</a>
+                            <td id="active-div" rowspan="4"><a href="javascript:void(0)" onclick="openDivision('C');">DIVISION C</a>
                             </td>
                             <td>12:00-1:00</td>
                             <td>Civics</td>
@@ -422,17 +421,18 @@
                 </div>
                 
             </div>
+            
         </div>
                 
         <script>
-            openCity("A")
-            function openCity(cityName) {
+            openDivision("A")
+            function openDivision(divisionName) {
             var i;
-            var x = document.getElementsByClassName("city");
+            var x = document.getElementsByClassName("division");
             for (i = 0; i < x.length; i++) {
             x[i].style.display = "none";
             }
-            document.getElementById(cityName).style.display = "block";
+            document.getElementById(divisionName).style.display = "block";
             } 
         </script>
    
